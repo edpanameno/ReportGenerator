@@ -8,6 +8,7 @@ namespace ReportGenerator
     {
         static void Main(string[] args)
         {
+            // A simple way to get arguments for this applicatoin
             if(args.Length == 0)
             {
                 Console.WriteLine("ERROR: You must pass the required parameter to generate the required data.");
