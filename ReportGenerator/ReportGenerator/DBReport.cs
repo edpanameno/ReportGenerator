@@ -89,7 +89,6 @@ namespace ReportGenerator
                                      "VALUES ('" + serialNumber + "','" + computerName + "', '" + registeredUser + "','" + userName + 
                                               "','" + osType + "','"+ servicePack + "','" + ipAddress + "','" + DateTime.Now.ToString() + "')";
 
-                //Console.WriteLine(commandText);
                 // Insert data on to table
                 cmd.Connection.Open();
                 cmd.CommandText = commandText;
@@ -207,7 +206,7 @@ namespace ReportGenerator
 
             // Optical Drive Information
             // TODO: There may be more than one in here ... but for now
-            // I am only working about the first one because of the restrictions
+            // I am only worrying about the first one because of the restrictions
             // on the db schema.
             ManagementClass c = new ManagementClass("Win32_CDROMDrive");
             foreach(ManagementObject cd in c.GetInstances())
@@ -236,7 +235,6 @@ namespace ReportGenerator
                                         "','" + soundCardName + "','" + nic +                                         
                                         "','" + opticalDriveName + "','" + motherBoard + "')";
 
-            //Console.WriteLine(commandText);
             cmd.CommandText = commandText;
             cmd.Connection.Open();
             cmd.ExecuteNonQuery();
