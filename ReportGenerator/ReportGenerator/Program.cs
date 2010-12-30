@@ -30,6 +30,7 @@ namespace ReportGenerator
                     DBReport.ComputerInformation();
                     DBReport.HardwareInformation();
                     DBReport.SoftwareInformation();
+                    //DBReport.NetworkInformation();
                 }
                 else if(cmd.Equals("c"))
                 {
